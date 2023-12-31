@@ -29,7 +29,7 @@ def home():
     users = User.query.all()
     return render_template('index.html', users=users)
 
-# Ensure this block only runs when executed directly, not when imported as a module
+# Ensure this block only runs when executed directly, not when imported as module
 if __name__ == '__main__':
     app.app_context().push()
     db.create_all()
