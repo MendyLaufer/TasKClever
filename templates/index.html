@@ -1,0 +1,22 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskClever</title>
+</head>
+<body>
+    <h1>Users and Tasks</h1>
+    <ul>
+        {% for user in users %}
+            <li>{{ user.username }}</li>
+            <ul>
+                {% for task in user.tasks %}
+                    <li>{{ task.content }}</li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </ul>
+</body>
+</html>
